@@ -1,5 +1,8 @@
+const path = require("path");
+
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
 const WebpackCdnPlugin = require("webpack-cdn-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   chainWebpack: config => {
@@ -40,6 +43,15 @@ module.exports = {
       .use("url-loader")
       .loader("url-loader")
       .options({});
+
+    config.plugin("copy").use(CopyWebpackPlugin, [
+      [
+        {
+          from: path.resolve(__dirname, "./gas"),
+          ignore: [".*"]
+        }
+      ]
+    ]);
 
     // Get npm modules from CDN
     config.plugin("webpack-cdn").use(WebpackCdnPlugin, [
