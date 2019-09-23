@@ -1,5 +1,7 @@
 import Vue from "vue";
-import Vuetify from "vuetify/lib";
+import Vuetify from "vuetify";
+// import Vuetify from "vuetify/lib"; // => css の容量増加する
+// import 'vuetify/dist/vuetify.min.css' // => css の容量増加する
 import ja from "vuetify/es5/locale/ja";
 
 Vue.use(Vuetify);
