@@ -7,7 +7,7 @@
 </template>
 
 <script>
-const axios = require("axios");
+import axios from "axios";
 
 export default {
   data: () => ({
@@ -15,9 +15,17 @@ export default {
   }),
   methods: {
     searchCalender() {
-      this.calenders = listUpcomingEvents();
-
-      axios.post("/dev").then(res => console.log(res));
+      // this.calenders = listUpcomingEvents();
+      google.script.run
+        .withSuccessHandler(function(e, e2) {
+          console.log("withSuccessHandler", e, e2);
+        })
+        .withFailureHandler(function(e, e2) {
+          console.log("withFailureHandler", e, e2);
+        })
+        .doPost();
+      // axios.get("").then(res => console.log(res));
+      // axios.post("https://script.google.com/macros/s/AKfycbwJVSdftYAU6XDUzoiKHhkSQjDxV2qnVSIajOkMrg/exec").then(res => console.log(res));
     }
   }
 };
