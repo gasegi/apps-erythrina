@@ -23,7 +23,7 @@ export default {
         .withFailureHandler(function(e, e2) {
           console.log("withFailureHandler", e, e2);
         })
-        .doPost();
+        .getCalenderList();
       // axios.get("").then(res => console.log(res));
       // axios.post("https://script.google.com/macros/s/AKfycbwJVSdftYAU6XDUzoiKHhkSQjDxV2qnVSIajOkMrg/exec").then(res => console.log(res));
     }

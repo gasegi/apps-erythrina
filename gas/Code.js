@@ -4,44 +4,13 @@ function doGet() {
   return html;
 }
 
-function doPost() {
-  return "test";
-  const listUpcomingEvents = function() {
-    var calendarId = "primary";
-    var optionalArgs = {
-      timeMin: new Date().toISOString(),
-      showDeleted: false,
-      singleEvents: true,
-      maxResults: 10,
-      orderBy: "startTime"
-    };
-    var response = Calendar.Events.list(calendarId, optionalArgs);
-    var events = response.items;
-    if (events.length > 0) {
-      for (i = 0; i < events.length; i++) {
-        var event = events[i];
-        var when = event.start.dateTime;
-        if (!when) {
-          when = event.start.date;
-        }
-        Logger.log("%s (%s)", event.summary, when);
-        console.log("%s (%s)", event.summary, when);
-        return event.sammary;
-      }
-    } else {
-      Logger.log("No upcoming events found.");
-    }
-  };
-
-  return makeContent(listUpcomingEvents());
-}
-
 function makeContent(content) {
   return ContentService.createTextOutput(
     JSON.stringify({ content: content })
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
+<<<<<<< HEAD
 function makeContent(content) {
   return ContentService.createTextOutput(
     JSON.stringify({ content: content })
@@ -49,6 +18,8 @@ function makeContent(content) {
 }
 
 // eslint-disable-next-line no-unused-vars
+=======
+>>>>>>> d2e9291... [WIP] Code.js 対応
 function getCalenderList() {
   function listUpcomingEvents() {
     var calendarId = "primary";
@@ -80,3 +51,4 @@ function getCalenderList() {
 
   return makeContent(listUpcomingEvents());
 }
+
