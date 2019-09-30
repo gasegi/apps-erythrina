@@ -1,7 +1,11 @@
 module.exports = {
   root: true,
+  plugins: [
+    "googleappsscript"
+  ],
   env: {
-    node: true
+    node: true,
+    "googleappsscript/googleappsscript": true
   },
   extends: ["plugin:vue/essential", "@vue/prettier"],
   rules: {

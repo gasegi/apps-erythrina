@@ -3853,6 +3853,13 @@ eslint-plugin-cypress@^2.2.1:
   dependencies:
     globals "^11.12.0"
 
+eslint-plugin-googleappsscript@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-googleappsscript/-/eslint-plugin-googleappsscript-1.0.3.tgz#838ce536b969443ec39c1944350c722334884135"
+  integrity sha512-Dgcbu8w2HzAze0T4AyIVUfS6g213q1sMZ+BDkfUlulL79HMiLLocD1gt8XnKJ0fgutUkhAsIVuuHxNs3tmrlWA==
+  dependencies:
+    requireindex "~1.1.0"
+
 eslint-plugin-prettier@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.0.tgz#8695188f95daa93b0dc54b249347ca3b79c4686d"
@@ -9298,6 +9305,11 @@ require-uncached@^1.0.3:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
+
+requireindex@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
+  integrity sha1-5UBLgVV+91225JxacgBIk/4D4WI=
 
 requires-port@^1.0.0:
   version "1.0.0"
