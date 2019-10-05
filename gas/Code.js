@@ -10,7 +10,6 @@ function makeContent(content) {
   ).setMimeType(ContentService.MimeType.JSON);
 }
 
-<<<<<<< HEAD
 function makeContent(content) {
   return ContentService.createTextOutput(
     JSON.stringify({ content: content })
@@ -18,8 +17,6 @@ function makeContent(content) {
 }
 
 // eslint-disable-next-line no-unused-vars
-=======
->>>>>>> d2e9291... [WIP] Code.js 対応
 function getCalenderList() {
   function listUpcomingEvents() {
     var calendarId = "primary";
